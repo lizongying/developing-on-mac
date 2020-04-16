@@ -2,7 +2,6 @@
 mac上，为了便捷开发，一些配置和工具
 
 ## github
-
 ### build github-key
 ~~~
 ssh-keygen -t rsa -C "lizongying@msn.com"
@@ -39,13 +38,14 @@ If program exists
 git init
 git config user.name lizongying
 git config user.email lizongying@msn.com
+git remote add origin git@github.com:lizongying/developing-on-mac.git
 git add -A .
 git commit -m'init'
+git pull 
 git push --set-upstream origin master
 ```
 
 ## github program
-
 ### build github-key
 ~~~
 ssh-keygen -t rsa -C "lizongying@msn.com"
@@ -94,6 +94,8 @@ git config user.email lizongying@msn.com
 git remote add origin git@github.com.developing-on-mac:lizongying/developing-on-mac.git
 git add -A .
 git commit -m'init'
+git branch --set-upstream-to=origin/master master
+git pull origin master --allow-unrelated-histories
 git push --set-upstream origin master
 ```
 
